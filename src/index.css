@@ -1,0 +1,49 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+
+  html {
+      @apply scroll-smooth;
+  }
+
+
+  body {
+
+     @apply font-['Poppins'];
+    overflow-y: overlay;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 100%;
+  }
+    body {
+      --sb-track-color: rgb(220, 220, 220);
+      --sb-thumb-color: yellow;
+      --sb-size: 6px;
+  
+      scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+  
+    body::-webkit-scrollbar {
+      width: var(--sb-size)
+    }
+  
+    body::-webkit-scrollbar-track {
+      background: var(--sb-track-color);
+      border-radius: 10px;
+    }
+  
+    body::-webkit-scrollbar-thumb {
+      background: var(--sb-thumb-color);
+      border-radius: 10px;
+  
+    }
+}
